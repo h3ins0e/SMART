@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SMART</string>
+    <string name="menu_user">User</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_menu">Menu</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_password">Password</string>
+    <string name="login_email">Email</string>
+</resources>
