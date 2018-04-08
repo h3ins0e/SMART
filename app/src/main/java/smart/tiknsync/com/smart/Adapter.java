@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -53,7 +54,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myViewHolder> {
     public int getItemCount() {
         return CarData.size();
     }
-    public class myViewHolder extends RecyclerView.ViewHolder{
+
+    public class myViewHolder extends RecyclerView.ViewHolder {
 
         TextView tvCarName, tvPrice;
         ImageView ivImageHolder;
@@ -66,6 +68,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myViewHolder> {
             tvPrice = itemView.findViewById(R.id.tvPrice);
             ivImageHolder = itemView.findViewById(R.id.ivImageHolder);
             btnBook = itemView.findViewById(R.id.btnBook);
+            
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(context, "Your Clicked on " + tvCarName.getText(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }

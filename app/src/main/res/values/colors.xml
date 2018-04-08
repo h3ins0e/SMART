@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="app_main_color">#1A9CFC</color>
-    <color name="btn_regcolor">#868181</color>
+    <color name="btn_reg_bg">#868181</color>
+    <color name="recycler_bg">#d2d2d2</color>
+    <color name="btn_booking_bg">#f00</color>
+    <color name="text_whiteColor">#fff</color>
 </resources>

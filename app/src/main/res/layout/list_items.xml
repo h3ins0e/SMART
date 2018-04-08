@@ -1,41 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp"
-    android:layout_marginTop="15dp">
+    android:paddingBottom="@dimen/dimen_5dp"
+    android:paddingTop="@dimen/dimen_5dp">
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f10303"
-        app:cardCornerRadius="5dp">
+        android:layout_marginLeft="@dimen/dimen_5dp"
+        android:layout_marginRight="@dimen/dimen_5dp"
+        app:cardCornerRadius="@dimen/dimen_5dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#afacac">
+            android:background="@color/recycler_bg">
 
 
             <ImageView
                 android:id="@+id/ivImageHolder"
-                android:layout_width="135dp"
-                android:layout_height="135dp"
-                android:src="@drawable/ic_car" />
+                android:layout_width="@dimen/img_size"
+                android:layout_height="@dimen/img_size"
+                android:src="@drawable/ic_car"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
 
             <TextView
                 android:id="@+id/tvCarName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="75dp"
-                android:paddingTop="25dp"
-                android:text="Car Name"
-                android:textSize="20dp"
+                android:paddingLeft="@dimen/dimen_75dp"
+                android:paddingTop="@dimen/dimen_25dp"
+                android:text="@string/car_title"
+                android:textSize="@dimen/dimen_20dp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toRightOf="@+id/ivImageHolder" />
 
@@ -43,9 +46,9 @@
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="75dp"
-                android:paddingTop="55dp"
-                android:text="150,000 ks / Day"
+                android:paddingLeft="@dimen/dimen_75dp"
+                android:paddingTop="@dimen/dimen_55dp"
+                android:text="@string/prices_per_day"
                 app:layout_constraintLeft_toRightOf="@+id/ivImageHolder" />
 
 
@@ -53,12 +56,12 @@
                 android:id="@+id/btnBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="75dp"
-                android:layout_marginRight="50dp"
-                android:backgroundTint="#f00"
-                android:text="Book Now"
+                android:layout_marginLeft="@dimen/dimen_75dp"
+                android:layout_marginRight="@dimen/dimen_55dp"
+                android:backgroundTint="@color/btn_booking_bg"
+                android:text="@string/btn_text"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/text_whiteColor"
                 app:layout_constraintLeft_toRightOf="@id/ivImageHolder"
                 app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
         </android.support.constraint.ConstraintLayout>
